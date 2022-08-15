@@ -1,0 +1,12 @@
+def mcd(M,N):
+    if M==N:
+        m=M
+    elif M>N:
+        m=mcd(M-N,N)
+    else:
+        m=mcd(N,M%N)
+    return m
+
+M=int(input("Ingrese el primer número: "))
+N=int(input("Ingrese el primer número: "))
+print(f"El maximo divisor es {mcd(M,N)}")
